@@ -1,5 +1,5 @@
 import styles from "./Navbar.module.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../images/hands-and-paws.png";
 import search from "../../images/search.png";
 import React, { useEffect, useState, useRef } from "react";
@@ -36,22 +36,26 @@ export default function Navbar() {
           
           />
           <div>
-            {isOpen && (
+            {isOpen ? (
               <ul className={styles.navMenu}>
-                <Link to="/" className={styles.links}>
+                <NavLink to="/home" className={({ isActive }) => (isActive ? styles.activeLink : styles.links)}>
                   Home
-                </Link>
-                <Link to="/menu" className={styles.links}>
+                </NavLink>
+                <NavLink to="/menu" className={({ isActive }) => (isActive ? styles.activeLink : styles.links)}>
                   Menu
-                </Link>
-                <Link to="/other-services" className={styles.links}>
+                </NavLink>
+                <NavLink to="/other-services" className={({ isActive }) => (isActive ? styles.activeLink : styles.links)}>
                   Other Services
-                </Link>
-                <Link to="/contact-us" className={styles.links}>
+                </NavLink>
+                <NavLink to="/contact-us" className={({ isActive }) => (isActive ? styles.activeLink : styles.links)}>
                   Contact Us
-                </Link>
+                </NavLink>
+                <div className={styles.accountButtonsDiv}>
+                    <button className={styles.accountButtons}>Sign Up</button>
+                    <button className={styles.accountButtons}>Log In</button>
+                </div>
               </ul>
-            )} 
+            ): null} 
           </div>
         </div>
         <div className={styles.searchSection}>
