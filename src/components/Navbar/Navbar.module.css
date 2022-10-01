@@ -5,8 +5,13 @@
     position: fixed;
     background: rgb(62, 62, 62);
     display: flex;
-    justify-content: space-evenly;
 
+
+}
+
+.logoSection{
+    border-style: solid;
+    
 }
 
 .logo {
@@ -25,10 +30,27 @@
     font-size: 24px;
 }
 
+.searchSection {
+    white-space:nowrap;
+    border-style: solid;
+    width: 33%;
+    visibility: visible;
+}
+
 .search {
     height: 40px;
     width: 40px;
-    filter: invert(1);
-    margin-top: 15px;
+    top: 15px;
+    margin-right: -55px;
+    position: relative;
     cursor: pointer;
+    z-index: 1;
 }
+
+.searchInput {
+    height: 42px;
+    width: 100%;
+    z-index: 0;
+    border-radius: 12px;
+}
+
