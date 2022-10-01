@@ -10,28 +10,40 @@ export default function Navbar() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.logoSection}>
-        <img src={logo} alt="" className={styles.logo} />
+      <div className={styles.innerContainer}>
+        <div className={styles.hamburgerSection}>
+          <Hamburger
+            rounded={true}
+            size={48}
+            onToggle={() => setOpen(!isOpen)}
+          />
+          <div>
+            {isOpen ? (
+              <ul className={styles.navMenu}>
+                <Link to="/" className={styles.links}>
+                  Home
+                </Link>
+                <Link to="/menu" className={styles.links}>
+                  Menu
+                </Link>
+                <Link to="/other-services" className={styles.links}>
+                  Other Services
+                </Link>
+                <Link to="/contact-us" className={styles.links}>
+                  Contact Us
+                </Link>
+              </ul>
+            ) : null}
+          </div>
+        </div>
+        <div className={styles.searchSection}>
+          <img src={search} alt="" className={styles.search} />
+          <input className={styles.searchInput} placeholder="Search Something Here!"/>
+        </div>
+        <div className={styles.logoSection}>
+          <img src={logo} alt="" className={styles.logo} />
+        </div>
       </div>
-      {/* <ul className={styles.section}>
-                <Link to='/' className={styles.links}>Home</Link>
-                <Link to='/menu'  className={styles.links}>Menu</Link>
-                <Link to='/other-services'  className={styles.links}>Other Services</Link>
-                <Link to='/contact-us'  className={styles.links}>Contact Us</Link>
-                
-            </ul> */}
-      <div className={styles.searchSection}>
-        <img src={search} alt="" className={styles.search} />
-        <input className={styles.searchInput} />
-      </div>
-      <Hamburger rounded={true} size={48} onToggle={()=> setOpen (!isOpen)}  />
-      <div>{isOpen?<ul className={styles.section}>
-                <Link to='/' className={styles.links}>Home</Link>
-                <Link to='/menu'  className={styles.links}>Menu</Link>
-                <Link to='/other-services'  className={styles.links}>Other Services</Link>
-                <Link to='/contact-us'  className={styles.links}>Contact Us</Link>
-                
-            </ul>:null}</div>
     </div>
   );
 }
