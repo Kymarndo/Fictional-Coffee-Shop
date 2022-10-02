@@ -23,6 +23,7 @@ export default function Navbar() {
         document.removeEventListener("mousedown", outOfMenuClickCheck)
     }
   }, [isOpen])
+
   return (
     <div className={styles.container} ref={ref}>
       <div className={styles.innerContainer}>
@@ -37,8 +38,10 @@ export default function Navbar() {
           />
           <div>
             {isOpen ? (
+              <>
+
               <ul className={styles.navMenu}>
-                <NavLink to="/home" className={({ isActive }) => (isActive ? styles.activeLink : styles.links)}>
+                <NavLink end to = "/" className={({ isActive }) => (isActive ? styles.activeLink : styles.links)} >
                   Home
                 </NavLink>
                 <NavLink to="/menu" className={({ isActive }) => (isActive ? styles.activeLink : styles.links)}>
@@ -55,6 +58,8 @@ export default function Navbar() {
                     <button className={styles.accountButtons}>Log In</button>
                 </div>
               </ul>
+              <div className={styles.container2} />
+              </>
             ): null} 
           </div>
         </div>
