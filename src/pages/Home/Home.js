@@ -1,14 +1,11 @@
 import styles from "./Home.module.css";
-import img1 from "../../images/yummyBaking.jpg"
+import HomeTopImage from "../../components/Home/HomeTopImage/HomeTopImage";
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <div className={styles.innerContainer}>
-        <div className={styles.image1Container}>
-        <img src={img1} alt='' className={styles.topImage}/>
-        <div className={styles.image1Overlay}>Welcome people {'&'} pets!</div>
-        </div>
+        <HomeTopImage />
       </div>
     </div>
   );
