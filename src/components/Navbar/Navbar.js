@@ -42,16 +42,16 @@ export default function Navbar() {
 
               <ul className={styles.navMenu}>
                 <NavLink end to = "/" className={({ isActive }) => (isActive ? styles.activeLink : styles.links)} >
-                  Home
+                <p>Home</p>  
                 </NavLink>
                 <NavLink to="/menu" className={({ isActive }) => (isActive ? styles.activeLink : styles.links)}>
-                  Menu
+                  <p>Menu</p>
                 </NavLink>
                 <NavLink to="/other-services" className={({ isActive }) => (isActive ? styles.activeLink : styles.links)}>
-                  Other Services
+                 <p>Other Services</p> 
                 </NavLink>
                 <NavLink to="/contact-us" className={({ isActive }) => (isActive ? styles.activeLink : styles.links)}>
-                  Contact Us
+                  <p>Contact Us</p>
                 </NavLink>
                 <div className={styles.accountButtonsDiv}>
                     <button className={styles.accountButtons}>Sign Up</button>
