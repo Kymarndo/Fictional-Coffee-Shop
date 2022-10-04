@@ -1,0 +1,28 @@
+.topImage {
+    width: 100%;
+    z-index: -1;
+}
+
+.image1Overlay {
+    color: white;
+    font-size: 48px;
+    font-family: sans-serif;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: -80px;
+    padding: 10px;
+    position: relative;
+}
+
+@media screen and (max-width: 550px) {
+    .image1Overlay {
+        font-size: 32px;
+        margin-top: -62px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .image1Overlay {
+        font-size: 26px;
+        margin-top: -54px;
+    }
+}

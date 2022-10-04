@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  width: 50%;
+  border-style: solid;
+  border-color: white;
+}
+
+.text {
+  position: relative;
+  font-size: 48px;
+  margin-top: -140px;
+  font-family: sans-serif;
+  color: white;
+}
+
+.button {
+  height: 56px;
+  width: 330px;
+  background: none;
+  border-width: 3px;
+  border-style: solid;
+  margin-top: 12px;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.button:hover {
+  background: rgba(255, 255, 255, 0.505);
+  color: black;
+  cursor: pointer;
+  font-size: 22px;
+  transition: 0.5s;
+}
+
+.image {
+  margin: 0px;
+  width: 100%;
+}
+
+@media screen and (max-width: 950px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+
+}
+
+@media screen and (max-width: 440px) {
+    .text {
+        font-size: 36px;
+    }
+}

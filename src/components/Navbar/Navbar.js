@@ -1,9 +1,10 @@
 import styles from "./Navbar.module.css";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../images/hands-and-paws.png";
-import search from "../../images/search.png";
 import React, { useEffect, useState, useRef } from "react";
 import { Divide as Hamburger } from "hamburger-react";
+import login from "../../images/login.png"; //User icon by Icons8
+import search from "../../images/searchIcon.png"; //User icon by Icons8
 
 export default function Navbar() {
     const ref = useRef ();
@@ -23,10 +24,11 @@ export default function Navbar() {
         document.removeEventListener("mousedown", outOfMenuClickCheck)
     }
   }, [isOpen])
+
   return (
     <div className={styles.container} ref={ref}>
       <div className={styles.innerContainer}>
-        <div className={styles.hamburgerSection}>
+      <div className={styles.hamburgerSection}>
           <Hamburger
           color="white"
             rounded={true}
@@ -37,34 +39,43 @@ export default function Navbar() {
           />
           <div>
             {isOpen ? (
+              <>
+
               <ul className={styles.navMenu}>
-                <NavLink to="/home" className={({ isActive }) => (isActive ? styles.activeLink : styles.links)}>
-                  Home
-                </NavLink>
                 <NavLink to="/menu" className={({ isActive }) => (isActive ? styles.activeLink : styles.links)}>
-                  Menu
+                  <p>Menu</p>
                 </NavLink>
                 <NavLink to="/other-services" className={({ isActive }) => (isActive ? styles.activeLink : styles.links)}>
-                  Other Services
+                 <p>Other Services</p> 
                 </NavLink>
                 <NavLink to="/contact-us" className={({ isActive }) => (isActive ? styles.activeLink : styles.links)}>
-                  Contact Us
+                  <p>Contact Us</p>
                 </NavLink>
-                <div className={styles.accountButtonsDiv}>
-                    <button className={styles.accountButtons}>Sign Up</button>
-                    <button className={styles.accountButtons}>Log In</button>
-                </div>
+
               </ul>
+              <div className={styles.container2} />
+              </>
             ): null} 
           </div>
         </div>
-        <div className={styles.searchSection}>
-          <img src={search} alt="" className={styles.search} />
-          <input className={styles.searchInput} placeholder="Search Something Here!"/>
-        </div>
-        <div className={styles.logoSection}>
+      <div className={styles.logoSection}>
             <Link to="/" ><img src={logo} alt="" className={styles.logo} /></Link>         
         </div>
+        <ul className={styles.barLinksDiv}>
+                <NavLink to="/menu" className={({ isActive }) => (isActive ? styles.activeBarLink : styles.barLinks)}>
+                  <p>Menu</p>
+                </NavLink>
+                <NavLink to="/other-services" className={({ isActive }) => (isActive ? styles.activeBarLink : styles.barLinks)}>
+                 <p>Other Services</p> 
+                </NavLink>
+                <NavLink to="/contact-us" className={({ isActive }) => (isActive ? styles.activeBarLink : styles.barLinks)}>
+                  <p>Contact Us</p>
+                </NavLink>
+              </ul>
+              <div className={styles.searchLoginSection}>
+              <img src={search} alt="" className={styles.search} />              
+              <img src={login} alt="" className={styles.login}/>
+              </div>
       </div>
     </div>
   );

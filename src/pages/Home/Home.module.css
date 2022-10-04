@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.innerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
+    background: white;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .innerContainer {
+        width: 100%;
+    }
+}
+
