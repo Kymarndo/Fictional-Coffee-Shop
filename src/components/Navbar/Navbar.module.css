@@ -1,209 +1,282 @@
 .container {
-    height: 75px;
-    width: 100%;
-    top:0;
-    position: fixed;
-
-    display: flex;
-    justify-content: center;
-    z-index: 100;
+  height: 75px;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.89);
+  display: flex;
+  justify-content: center;
+  z-index: 100;
 }
 
 .container2 {
-    height: 75px;
-    width: 100%;
-    top:0;
-    position: fixed;
-    left: 0;
-    background: rgba(0, 0, 0, 0.542);
-    display: flex;
-    flex-direction: row;
-    z-index: -1;
+  height: 75px;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  left: 0;
+  background: rgba(0, 0, 0, 0.542);
+  display: flex;
+  flex-direction: row;
+  z-index: -1;
 }
 
 .innerContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 80%;
-
+  display: flex;
+  width: 85%;
 }
 
-.logoSection{
-    height: 100%;
-
+.logoSection {
+  height: 100%;
 }
 
 .logo {
-    height: 80px;
-    margin-top: 5px;
-
+  height: 80px;
+  margin-top: 5px;
 }
 
-.activeLink {
-    text-decoration: none;
-    list-style: none;
-    color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 24px;
-    height: 80px;
-    width: 100%;
-    background: rgba(1, 159, 1, 0.581);
-}
-
-.activeLink:hover {
-    background: rgba(255, 255, 255, 0.611);
-    transition: 0.5s;
-    color: black;
-    font-size: 26px;
-}
-
-.links  {
-    text-decoration: none;
-    list-style: none;
-    color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 24px;
-    height: 80px;
-    width: 100%;
-
-}
-
-
-.links:hover {
-    background: rgba(255, 255, 255, 0.695);
-    transition: 0.5s;
-    color: black;
-    font-size: 26px;
-}
-
-.searchSection {
-    width: 50%;
-    visibility: visible;
-    white-space: nowrap;
+.searchLoginSection {
+    height: 100%;
+    width: 120px;
     display: flex;
-    flex-direction: row;
-    margin-top: 14px;
+    justify-content: space-between;
+    filter: invert(1);
+    margin-left: 25px;
 }
 
 .search {
-    height: 40px;
-    width: 40px;
-    position: relative;
+    height: 60%;
+    margin-top: auto;
+    margin-bottom: auto;
     cursor: pointer;
-    z-index: 1;
-    margin-top: 4px;
-    margin-right: -60px;
 }
 
-.searchInput {
-    height: 42px;
-    width: 100%;
-    z-index: 0;
-    border-radius: 24px;
-    padding: 0 70px;
-    font-size: 24px;
-
-
+.login {
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 60%;
+    cursor: pointer;
 }
 
-.hamburgerSection{
-
-   padding: 5px;
-   height: 50px;
-   margin-top: 8px;
-
-
-}
-
-.navMenu {
-    position: fixed;
-    top: 62px;
-    width: 78%;
-    background: rgba(62, 62, 62, 0.817);
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    justify-content: center;
-    
-}
-
-.accountButtonsDiv {
-    align-self: center;
-    height: 80px;
-    width: 100%;
+.barLinksDiv {
+    margin-top: 0;
+    margin-left: auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    white-space: noWrap ;
+    height: 100%;
+    justify-content: flex-end;
 }
 
-.accountButtons {
-    width: 50%;
+.barLinks {
+    text-decoration: none;
+    list-style: none;
     color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     font-size: 24px;
-    background: rgba(62, 62, 62, 0.621);
-    border-radius: 16px;
-
+    margin: 0 25px;
 }
 
-.accountButtons:hover {
-    background: rgb(193, 193, 193);
-    transition: 0.5s;
-    color: black;
-    cursor: pointer;
-    font-size: 26px;
+.barLinks:hover {
+    text-decoration: underline 3px white;
+    text-underline-offset: 6px;
 }
 
-@media screen and (max-width: 1000px) {
-
-.innerContainer {
+.activeBarLink {
+    text-decoration: underline 3px rgba(1, 159, 1, 0.581);
+    list-style: none;
+    color: white;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    height: 80px;
     width: 100%;
-}    
+    text-underline-offset: 6px;
+    margin: 0 25px;
+  }
 
-.navMenu {
-    width: 100%;
-    position: fixed;
-    left: 0;
+  .activeBarLink:hover {
+    text-decoration: underline 3px white;
+    text-underline-offset: 6px;
+  }
 
+.activeLink {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  height: 80px;
+  width: 100%;
+  background: rgba(1, 159, 1, 0.581);
+}
+
+.activeLink:hover {
+  background: rgba(255, 255, 255, 0.611);
+  transition: 0.5s;
+  color: black;
+  font-size: 26px;
+}
+
+.links {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  height: 80px;
+  width: 100%;
+}
+
+.links:hover {
+  background: rgba(255, 255, 255, 0.695);
+  transition: 0.5s;
+  color: black;
+  font-size: 26px;
+}
+
+.searchSection {
+  width: 50%;
+  visibility: visible;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  margin-top: 14px;
+}
+
+
+
+.searchInput {
+  height: 42px;
+  width: 100%;
+  z-index: 0;
+  border-radius: 24px;
+  padding: 0 70px;
+  font-size: 24px;
 }
 
 .hamburgerSection {
-    position: relative;
-    left: 12px;
+  padding: 5px;
+  height: 50px;
+  margin-top: 8px;
+  display: none;
+  pointer-events: none;
 }
+
+.navMenu {
+  position: fixed;
+  animation: opening 0.4s;
+  animation-direction: normal;
+  width: 300px;
+  background: rgba(62, 62, 62, 0.817);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  top: 59px;
+  left: 0;
+}
+
+@keyframes opening {
+  0% {
+    left: -360px;
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+    
+    .logoSection {
+        margin:auto;
+    
+      }
+    
+      .barLinksDiv {
+        display: none;
+      }
+    
+      .hamburgerSection {
+        display: flex;
+        pointer-events: all;
+        position: relative;
+        left: 12px; 
+        margin-right: 50px;
+      }
+    
+}
+
+@media screen and (max-width: 1000px) {
+  .innerContainer {
+    width: 100%;
+  }
+
+
 
 }
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 610px)
+{
+
+    .logo {
+        height: 70px;
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .searchLoginSection {
+        width: 110px;
+        margin-left: 0;
+        margin-right: 15px;
+    }
+
+    .hamburgerSection {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .searchLoginSection {
+        display: none;
+    }
 
     .logoSection {
-        margin: auto;
+        margin-right: auto;
     }
 
-    .searchSection {
-            pointer-events: none;
-            display: none;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .accountButtonsDiv {
-        flex-direction: column;
-        height: 120px;
+    .hamburgerSection {
+        margin-right: 0px;
     }
 
-    .accountButtons {
+    .navMenu {
+        z-index: -1;
         width: 100%;
-        height: 50%;
     }
-}
 
-@media screen and (max-width: 500px) {
-    .logo {
-        margin-top: 10px;
-        height: 90%;
-        display: flex;
-        flex-direction: row;
-    }
+    @keyframes opening {
+        0% {
+          top: -360px;
+          opacity: 0;
+        }
+      
+        80% {
+          opacity: 0.3;
+        }
+      
+        100% {
+          opacity: 1;
+          top: 59px;
+        }
+      }
 }
